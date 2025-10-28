@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Batik Indonesia</title>
+    <style>
+        /* RESET DASAR & FONT */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #8B4513; /* Coklat Tua */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin-top: 5px;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        /* CONTAINER UTAMA */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* SECTION BATIK */
+        .batik-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .batik-section h2 {
+            font-size: 2em;
+            color: #5D4037; /* Coklat Sedang */
+            margin-bottom: 30px;
+            border-bottom: 3px solid #5D4037;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* GALERI/GRID BATIK */
+        .batik-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* KARTU BATIK */
+        .batik-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .batik-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .batik-card-image {
+            height: 200px;
+            background-color: #ccc; /* Placeholder warna abu-abu */
+            /* Dalam implementasi nyata, ganti dengan gambar batik */
+            background-image: url('placeholder-batik.jpg'); /* Ganti dengan URL gambar */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Contoh spesifik untuk 3 batik */
+        #batik-parang .batik-card-image {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/300x200?text=Batik+Parang');
+        }
+        #batik-megamendung .batik-card-image {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/300x200?text=Batik+Mega+Mendung');
+        }
+        #batik-kawung .batik-card-image {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/300x200?text=Batik+Kawung');
+        }
+
+
+        .batik-card-content {
+            padding: 15px;
+        }
+
+        .batik-card-content h3 {
+            color: #A0522D; /* Coklat Muda */
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .batik-card-content p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .batik-card-content a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .batik-card-content a:hover {
+            background-color: #8B4513;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portofolio Khasanah Batik Nusantara</h1>
+        <p>Jelajahi Keindahan dan Filosofi Corak Batik Indonesia</p>
+    </header>
+
+    <main class="container">
+        <section class="batik-section">
+            <h2>Jenis-Jenis Batik Pilihan</h2>
+            
+            <div class="batik-gallery">
+            
+                <div class="batik-card" id="batik-parang">
+                    <div class="batik-card-image" aria-label="Gambar ilustrasi Batik Parang"></div>
+                    <div class="batik-card-content">
+                        <h3>Batik Parang</h3>
+                        <p>Motif yang melambangkan ombak laut dan jalinan hidup. Seringkali dikaitkan dengan kekuasaan, kebesaran, dan kewibawaan.</p>
+                        <a href="#detail-parang">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="batik-card" id="batik-megamendung">
+                    <div class="batik-card-image" aria-label="Gambar ilustrasi Batik Mega Mendung"></div>
+                    <div class="batik-card-content">
+                        <h3>Batik Mega Mendung</h3>
+                        <p>Berasal dari Cirebon. Melambangkan awan pembawa hujan (kesuburan) dan bentuk awan yang luas, mencerminkan sifat kepemimpinan yang luas dan menenangkan.</p>
+                        <a href="#detail-megamendung">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="batik-card" id="batik-kawung">
+                    <div class="batik-card-image" aria-label="Gambar ilustrasi Batik Kawung"></div>
+                    <div class="batik-card-content">
+                        <h3>Batik Kawung</h3>
+                        <p>Motif berbentuk irisan buah aren atau kolang-kaling. Melambangkan kesucian, kebijaksanaan, dan keadilan.</p>
+                        <a href="#detail-kawung">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+        
+        <section class="batik-section" style="background-color: white; border-radius: 8px; padding: 40px; margin-top: 30px;">
+             <h2>Tentang Portofolio Ini</h2>
+             <p style="text-align: justify; max-width: 800px; margin: 0 auto;">Portofolio ini didedikasikan untuk mendokumentasikan dan mempromosikan kekayaan ragam hias dan filosofi di balik setiap jenis Batik Indonesia. Batik bukan sekadar kain, melainkan warisan budaya tak benda dunia yang sarat makna.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portofolio Batik Indonesia. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
